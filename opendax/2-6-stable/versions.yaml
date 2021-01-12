@@ -1,0 +1,16 @@
+peatio:
+  image:
+    tag: 2.6.12
+barong:
+  image:
+    tag: 2.6.14
+finex:
+  image:
+    tag: 2.6.8
+tower:
+  image:
+    tag: 2.6.31
+frontend:
+  image:
+    tag: 2.6.5
+

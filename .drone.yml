@@ -1,0 +1,25 @@
+---
+type: docker
+kind: pipeline
+name: "Deploy"
+
+concurrency:
+  limit: 1
+
+steps:
+  - name: "Trigger deployment"
+    image: plugins/downstream
+    settings:
+      server:
+        from_secret: drone_server
+      token:
+        from_secret: drone_token
+      fork: true
+      wait: true
+      repositories:
+        - openware/odc-deployments
+trigger:
+  event:
+    - push
+  branch:
+    - master

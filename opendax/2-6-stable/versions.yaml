@@ -1,6 +1,6 @@
 barong:
   image:
-    tag: 2.6.25
+    tag: 2.6.26
 finex:
   image:
     tag: 2.6.8

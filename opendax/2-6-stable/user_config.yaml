@@ -1,0 +1,100 @@
+### This is the schema of OpenDAX v3 user-side config
+
+platform:
+  settings:
+    general:
+      title: OpenDAX
+      csrf_enabled: true
+      min_deposit_lvl: 1
+      min_withdraw_lvl: 1
+      min_trading_lvl: 1
+    tls:
+      enabled: false
+      host: www.example.com
+    frontend:
+      show_landing: true
+      sentry_enabled: false
+      languages: ["en", "fr"]
+      kyc_steps: ["email", "phone", "profile", "document", "address"]
+      is_draggable: false
+      is_resizable: false
+# TODO: Consider for later
+#   internationalization:
+#     defaultLanguage:
+#     supportedLanguages:
+
+providers:
+  kyc:
+    provider: kycaid|barong
+    # The default for KYCAid is Openware's API token
+    # apiToken:
+    mailer:
+      url:
+      user:
+      # Would the user need to provide his own token during the setup phase?
+      # Shall we generate a Sendgrid token per platform?
+      pass:
+    sms:
+      # Users should provide their Twilio tokens
+      # since generating them on OW side would be too expensive & hard to track
+      provider: twilio
+      settings:
+        apiKey:
+        account_sid:
+        # ...
+    storage:
+      provider: google|s3
+      base_url: storage.apis.google.com
+      bucket_name: example-bucket
+      region: us-west-1
+      access_key: changeme
+      secret_key: changeme
+    captcha:
+      provider: recaptcha|geetest
+      site_key: changeme
+      secret_key: changeme
+    analytics:
+      provider: google
+      tracker_key: changeme
+
+# TODO
+# trading:
+#    orderTypes:
+#        free:
+#            - name: Limit Orders
+#            - name: Market Order
+#        advanced:
+#            - name: Stop-Loss
+#            - name: Stop-Limit
+#            - name: Take-Profit
+#            - name: Take-Limit
+#            - name: One Cancels Other
+
+# blockchain:
+#   wallets:
+#     # Hot wallets would most likely be managed by a Third-party solution
+#     - kind: cold
+#       blockchainname: eth
+#       address:
+#         - kind: cold
+#           blockchainname: btc
+#           address:
+#     #   Could also include electrumd?
+#
+#     #   Cryptonodes should probably be handled from Tower exclusively
+#     #   The default values are set to local bitcoind and Parity nodes
+#     #   nodes: []
+#
+#   mpc:
+#     # This would be filled out by default and shouldn't be edited in most cases
+#     - provider: fireblocks|unbound
+#       enabled: true
+#       settings:
+
+# TBD
+# security: {}
+
+modules:
+  - name: fundraising|referral
+    enabled: true
+    settings: # should be managed by the backend mostly

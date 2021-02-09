@@ -7,12 +7,12 @@ finex:
 frontend:
   image:
     tag: 2.6.12
+hdwallet:
+  image:
+    tag: 2.6.4
 peatio:
   image:
     tag: 2.6.26
 tower:
   image:
     tag: 2.6.45
-hdwallet:
-  image:
-    tag: 2.6.3

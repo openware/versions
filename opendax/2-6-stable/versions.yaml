@@ -13,3 +13,6 @@ peatio:
 tower:
   image:
     tag: 2.6.45
+hdwallet:
+  image:
+    tag: 2.6.3

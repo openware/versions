@@ -1,100 +1,185 @@
-### This is the schema of OpenDAX v3 user-side config
-
-platform:
-  settings:
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Swagger OpenDAX
+components:
+  schemas:
     general:
-      title: OpenDAX
-      csrf_enabled: true
-      min_deposit_lvl: 1
-      min_withdraw_lvl: 1
-      min_trading_lvl: 1
-    tls:
-      enabled: false
-      host: www.example.com
+      type: object
+      properties:
+        name:
+          type: string
+        url:
+          type: string
+          format: uri
+      required:
+        - name
+        - url
+      example:
+        name: OpenDAX
+        url: https://www.opendax.io/
     frontend:
-      show_landing: true
-      sentry_enabled: false
-      languages: ["en", "fr"]
-      kyc_steps: ["email", "phone", "profile", "document", "address"]
-      is_draggable: false
-      is_resizable: false
-# TODO: Consider for later
-#   internationalization:
-#     defaultLanguage:
-#     supportedLanguages:
-
-providers:
-  kyc:
-    provider: kycaid|barong
-    # The default for KYCAid is Openware's API token
-    # apiToken:
-    mailer:
-      url:
-      user:
-      # Would the user need to provide his own token during the setup phase?
-      # Shall we generate a Sendgrid token per platform?
-      pass:
-    sms:
-      # Users should provide their Twilio tokens
-      # since generating them on OW side would be too expensive & hard to track
-      provider: twilio
-      settings:
-        apiKey:
-        account_sid:
-        # ...
-    storage:
-      provider: google|s3
-      base_url: storage.apis.google.com
-      bucket_name: example-bucket
-      region: us-west-1
-      access_key: changeme
-      secret_key: changeme
+      type: object
+      properties:
+        theme:
+          type: string
+          default: "blue"
+          enum:
+            - blue
+            - teal
+            - red
+        layout:
+          type: object
+          properties:
+            draggable:
+              type: boolean
+              default: false
+            resizable:
+              type: boolean
+              default: false
+        landing:
+          type: boolean
+          default: true
+    security:
+      type: object
+      properties:
+        csrf:
+          type: boolean
+          default: true
+        tls:
+          type: object
+          properties:
+            enabled: 
+              type: boolean
+              default: true
+            domain:
+              type: string
+              format: uri
+            email:
+              type: string
+              format: email
+    kyc:
+      type: object
+      properties:
+        brarong:
+          type: object
+          properties:
+            status:
+              type: boolean
+              default: true
+        kycaid:
+          type: object
+          properties:
+            status:
+              type: boolean
+              default: false
+            auth_token:
+              type: string
+              default: b638c7d108ffb3443a2b0f87033c1b7a78f1
+        kyc_steps:
+          type: object
+          properties:
+            email:
+              type: boolean
+              readOnly: true
+              default: true
+            phone:
+              type: boolean
+              default: true
+            profile:
+              type: boolean
+              default: true
+            document:
+              type: boolean
+              default: true
+            address:
+              type: boolean
+              default: true
+        required_levels:
+          type: object
+          properties:
+            deposit:
+              type: integer
+              format: int64
+              default: 1
+            withdrawal:
+              type: integer
+              format: int64
+              default: 1
+            trading:
+              type: integer
+              format: int64
+              default: 1
+    analytics: 
+      type: object
+      properties:
+        google:
+          type: object
+          properties:
+            status:
+              type: boolean
+              default: false
+            tracker_key:
+              type: string
     captcha:
-      provider: recaptcha|geetest
-      site_key: changeme
-      secret_key: changeme
-    analytics:
-      provider: google
-      tracker_key: changeme
-
-# TODO
-# trading:
-#    orderTypes:
-#        free:
-#            - name: Limit Orders
-#            - name: Market Order
-#        advanced:
-#            - name: Stop-Loss
-#            - name: Stop-Limit
-#            - name: Take-Profit
-#            - name: Take-Limit
-#            - name: One Cancels Other
-
-# blockchain:
-#   wallets:
-#     # Hot wallets would most likely be managed by a Third-party solution
-#     - kind: cold
-#       blockchainname: eth
-#       address:
-#         - kind: cold
-#           blockchainname: btc
-#           address:
-#     #   Could also include electrumd?
-#
-#     #   Cryptonodes should probably be handled from Tower exclusively
-#     #   The default values are set to local bitcoind and Parity nodes
-#     #   nodes: []
-#
-#   mpc:
-#     # This would be filled out by default and shouldn't be edited in most cases
-#     - provider: fireblocks|unbound
-#       enabled: true
-#       settings:
-
-# TBD
-# security: {}
-
-modules:
-  - name: fundraising|referral
-    enabled: true
-    settings: # should be managed by the backend mostly
+      type: object
+      properties:
+        provider:
+          type: string
+          default: recaptcha
+          enum:
+            - recaptcha
+            - geetest
+        site_key:
+          type: string
+        secret_key:
+          type: string
+    sms:
+      type: object
+      provider:
+        provider:
+          type: string
+          default: twilio
+          readOnly: true
+        account_sid:
+          type: string
+        auth_token:
+          type: string
+        phone:
+          type: string
+    mailer:
+      type: object
+      properties:
+        url:
+         type: string
+        user:
+         type: string
+        password:
+         type: string
+         format: password
+    storage:
+      type: object
+      properties:
+        status:
+          type: boolean
+          default: false
+        provider:
+          type: string
+          default: google
+          enum:
+            - google
+            - s3
+        base_url:
+          type: string
+          format: uri
+          default: storage.apis.google.com
+        bucket_name:
+          type: string
+          default: example-bucket
+        region:
+          type: string
+          default: us-west-1
+        access_key:
+          type: string
+        secret_key:
+          type: string

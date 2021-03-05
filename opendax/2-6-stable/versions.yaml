@@ -9,7 +9,7 @@ frontend:
     tag: 2.6.17
 hdwallet:
   image:
-    tag: 4f024f4c
+    tag: 2.6.7
 peatio:
   image:
     tag: 2.6.35

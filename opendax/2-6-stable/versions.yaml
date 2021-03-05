@@ -6,7 +6,7 @@ finex:
     tag: 2.6.37
 frontend:
   image:
-    tag: 2.6.16
+    tag: 2.6.17
 hdwallet:
   image:
     tag: 2.6.6

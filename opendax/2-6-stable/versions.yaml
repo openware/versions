@@ -12,7 +12,7 @@ hdwallet:
     tag: 2.6.7
 peatio:
   image:
-    tag: 2.6.38
+    tag: 2.6.39
 tower:
   image:
     tag: 2.6.54

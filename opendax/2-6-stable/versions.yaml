@@ -15,4 +15,4 @@ peatio:
     tag: 2.6.39
 tower:
   image:
-    tag: 2.6.56
+    tag: 2.6.57

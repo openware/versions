@@ -3,4 +3,4 @@ barong:
     tag: 3.0.5
 peatio:
   image:
-    tag: 3.0.1
+    tag: 3.0.2

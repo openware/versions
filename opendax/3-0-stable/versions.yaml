@@ -1,6 +1,9 @@
 barong:
   image:
     tag: 3.0.5
+finex:
+  image:
+    tag: 3.0.1
 peatio:
   image:
     tag: 3.0.2

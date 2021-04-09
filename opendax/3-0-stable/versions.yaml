@@ -4,3 +4,6 @@ barong:
 peatio:
   image:
     tag: 3.0.2
+tower:
+  image:
+    tag: 3.0.5

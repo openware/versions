@@ -3,7 +3,7 @@ barong:
     tag: 2.6.45
 finex:
   image:
-    tag: 2.6.39
+    tag: 2.6.40
 frontend:
   image:
     tag: 2.6.27

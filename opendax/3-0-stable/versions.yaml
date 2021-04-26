@@ -12,4 +12,4 @@ peatio:
     tag: 3.0.4
 tower:
   image:
-    tag: 3.0.11
+    tag: 3.0.12

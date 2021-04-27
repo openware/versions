@@ -6,7 +6,7 @@ finex:
     tag: 3.0.3
 frontend:
   image:
-    tag: 3.0.18
+    tag: 3.0.19
 peatio:
   image:
     tag: 3.0.5

@@ -13,6 +13,9 @@ hdwallet:
 peatio:
   image:
     tag: 2.6.50
+rango:
+  image:
+    tag: 2.6.3
 tower:
   image:
     tag: 2.6.69

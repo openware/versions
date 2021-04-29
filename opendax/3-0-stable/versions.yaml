@@ -7,6 +7,9 @@ finex:
 frontend:
   image:
     tag: 3.0.21
+hdwallet:
+  image:
+    tag: 3.0.3
 peatio:
   image:
     tag: 3.0.5

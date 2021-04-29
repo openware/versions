@@ -4,7 +4,7 @@ barong:
 finex:
   image:
     tag: 3.0.3
-frontend:
+sonic:
   image:
     tag: 3.0.21
 hdwallet:

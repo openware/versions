@@ -18,4 +18,4 @@ sonic:
     tag: 3.0.26
 tower:
   image:
-    tag: 3.0.19
+    tag: 3.0.20

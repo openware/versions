@@ -15,7 +15,7 @@ peatio:
     tag: 2.6.50
 rango:
   image:
-    tag: 2.6.3
+    tag: 2.6.4
 tower:
   image:
     tag: 2.6.69

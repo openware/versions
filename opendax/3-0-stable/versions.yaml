@@ -15,7 +15,7 @@ rango:
     tag: 3.0.3
 sonic:
   image:
-    tag: 3.0.35
+    tag: 3.0.36
 tower:
   image:
     tag: 3.0.38

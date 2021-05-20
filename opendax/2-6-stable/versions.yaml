@@ -18,4 +18,4 @@ rango:
     tag: 2.6.4
 tower:
   image:
-    tag: 2.6.73
+    tag: 2.6.74

@@ -9,7 +9,7 @@ hdwallet:
     tag: 3.0.4
 peatio:
   image:
-    tag: 3.0.7
+    tag: 3.0.8
 rango:
   image:
     tag: 3.0.3

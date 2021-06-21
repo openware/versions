@@ -3,7 +3,7 @@ barong:
     tag: 3.0.13
 finex:
   image:
-    tag: 3.0.17
+    tag: 3.0.18
 hdwallet:
   image:
     tag: 3.0.4

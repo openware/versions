@@ -12,7 +12,7 @@ hdwallet:
     tag: 2.6.11
 peatio:
   image:
-    tag: 2.6.55
+    tag: 2.6.56
 rango:
   image:
     tag: 2.6.4

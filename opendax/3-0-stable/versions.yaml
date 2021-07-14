@@ -19,3 +19,6 @@ sonic:
 tower:
   image:
     tag: 3.0.54
+forex:
+  image:
+    tag: 3.0.0

@@ -3,7 +3,7 @@ barong:
     tag: 3.0.14
 finex:
   image:
-    tag: 3.0.23
+    tag: 3.0.24
 forex:
   image:
     tag: 3.0.0

@@ -1,0 +1,24 @@
+barong:
+  image:
+    tag: 3.1.0-7d9a70c
+finex:
+  image:
+    tag: 3.1.0-df7ca6c
+forex:
+  image:
+    tag: 3.1.0-43865b6
+hdwallet:
+  image:
+    tag: 3.1.0-454e798
+peatio:
+  image:
+    tag: 3.1.0-92d1e20
+rango:
+  image:
+    tag: 3.1.0-1fde354
+sonic:
+  image:
+    tag: 6941bf9
+tower:
+  image:
+    tag: 3.1.0-65ef930

@@ -15,7 +15,7 @@ peatio:
     tag: 3.1.0-92d1e20
 rango:
   image:
-    tag: 3.1.0-1fde354
+    tag: 3.1.0-4b7c41b
 sonic:
   image:
     tag: 6941bf9

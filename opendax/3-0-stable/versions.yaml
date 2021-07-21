@@ -21,4 +21,4 @@ sonic:
     tag: 3.0.53
 tower:
   image:
-    tag: 3.0.55
+    tag: 3.0.56

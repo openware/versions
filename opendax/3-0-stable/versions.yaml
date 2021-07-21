@@ -6,7 +6,7 @@ finex:
     tag: 3.0.24
 forex:
   image:
-    tag: 3.0.0
+    tag: 3.0.3
 hdwallet:
   image:
     tag: 3.0.6

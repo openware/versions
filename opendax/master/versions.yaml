@@ -15,7 +15,7 @@ hdwallet:
     tag: 3.1.0-454e798
 peatio:
   image:
-    tag: 3.1.0-92d1e20
+    tag: 3.1.0-a93ea96
 rango:
   image:
     tag: 3.1.0-4b7c41b

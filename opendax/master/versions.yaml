@@ -21,4 +21,4 @@ sonic:
     tag: 6941bf9
 tower:
   image:
-    tag: 3.1.0-65ef930
+    tag: 3.1.0-2d5fdf2

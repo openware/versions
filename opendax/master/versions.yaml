@@ -6,7 +6,7 @@ finex:
     tag: 3.1.0-df7ca6c
 forex:
   image:
-    tag: 3.1.0-43865b6
+    tag: 3.1.0-146172b
 hdwallet:
   image:
     tag: 3.1.0-454e798

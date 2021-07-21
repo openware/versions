@@ -3,7 +3,7 @@ barong:
     tag: 3.1.0-7bfa95d
 finex:
   image:
-    tag: 3.1.0-df7ca6c
+    tag: 3.1.0-075f562
 forex:
   image:
     tag: 3.1.0-146172b

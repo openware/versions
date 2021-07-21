@@ -1,6 +1,6 @@
 barong:
   image:
-    tag: 3.1.0-7d9a70c
+    tag: 3.1.0-7bfa95d
 finex:
   image:
     tag: 3.1.0-df7ca6c
